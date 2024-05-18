@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchor" accessibleRole="COMBO_BOX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="Anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svalero.SaraShopReactive.controller.AppController">
+    <children>
+        <Button fx:id="listProducts" layoutX="22.0" layoutY="165.0" mnemonicParsing="false" onAction="#listProducts" prefHeight="41.0" prefWidth="150.0" styleClass="label" stylesheets="@../css/style.css" text="Buscar productos" />
+        <TabPane fx:id="tabSaraStore" layoutX="32.0" layoutY="320.0" prefHeight="420.0" prefWidth="903.0">
+            <styleClass>
+                <String fx:value="TableView" />
+                <String fx:value="tab" />
+                <String fx:value="column-header" />
+            </styleClass>
+        </TabPane>
+        <ChoiceBox fx:id="maxTabsChoiceBox" layoutX="32.0" layoutY="257.0" prefHeight="25.0" prefWidth="79.0" styleClass="button" />
+        <Text layoutX="32.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Nº máximo de pastañas abiertas" wrappingWidth="130.13671875" />
+        <Text layoutX="22.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APP-Sara Store DATA" wrappingWidth="649.337890625">
+            <styleClass>
+                <String fx:value="labelEstilizado" />
+                <String fx:value="labelEstilizado" />
+            </styleClass>
+        </Text>
+    </children>
+</AnchorPane>

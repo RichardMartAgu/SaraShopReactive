@@ -56,7 +56,7 @@ public class App extends Application {
         // Se crea un nuevo Stage para la ventana principal
         Stage stage = new Stage();
         // Se carga el archivo FXML de la vista de la ventana principal
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com.svalero.appFootballData/view_football_data.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com.svalero.SaraShopReactive/view_sara_data.fxml"));
         // Se crea una escena con la vista de la ventana principal cargada desde el archivo FXML
         Scene scene = new Scene(loader.load());
         // Se establece el título de la ventana principal
