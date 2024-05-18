@@ -1,6 +1,6 @@
 package com.svalero.SaraShopReactive.task;
 
-import com.svalero.SaraShopReactive.model.Product;
+import com.svalero.SaraShopReactive.model.Shop;
 import com.svalero.SaraShopReactive.service.SaraStoreService;
 import io.reactivex.functions.Consumer;
 import javafx.application.Platform;
@@ -8,13 +8,13 @@ import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.scene.control.ProgressIndicator;
 
-public class SaraProductTask extends Task<Integer> {
+public class SaraShopTask extends Task<Integer> {
 
-    private final ObservableList<Product> products;
+    private final ObservableList<Shop> shops;
     private final ProgressIndicator progressIndicator;
 
-    public SaraProductTask(ObservableList<Product> products, ProgressIndicator progressIndicator) {
-        this.products = products;
+    public SaraShopTask(ObservableList<Shop> products, ProgressIndicator progressIndicator) {
+        this.shops = products;
         this.progressIndicator = progressIndicator;
     }
 
@@ -28,19 +28,17 @@ public class SaraProductTask extends Task<Integer> {
 
         // Crear una instancia del servicio de fútbol
         SaraStoreService saraStoreService = new SaraStoreService();
-        System.out.println("Aquí llega");
 
         // Definir un Consumer para manejar los equipos recibidos
-        Consumer<Product> user = (product) -> {
-            System.out.println("Aquí llega dentro subscribe");
+        Consumer<Shop> user = (shop) -> {
             // Retardar la ejecución para simular una operación de red
             Thread.sleep(250);
             // Agregar el nombre del equipo a la lista
-            Platform.runLater(() -> this.products.add(product));
+            Platform.runLater(() -> this.shops.add(shop));
         };
 
         // Suscribir el Consumer al servicio para recibir los equipos
-        saraStoreService.getAllProducts()
+        saraStoreService.getAllShops()
                 .subscribe(user);
 
         // Ocultar el indicador de progreso al finalizar la tarea

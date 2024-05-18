@@ -2,11 +2,11 @@ com\svalero\SaraShopReactive\controller\AppController.class
 com\svalero\SaraShopReactive\utils\ShowAlert.class
 com\svalero\SaraShopReactive\controller\SaraTaskController.class
 com\svalero\SaraShopReactive\model\Section.class
+com\svalero\SaraShopReactive\task\SaraShopTask.class
 com\svalero\SaraShopReactive\model\AllProducts.class
 com\svalero\SaraShopReactive\service\SaraStoreService.class
 com\svalero\SaraShopReactive\model\Product.class
 com\svalero\SaraShopReactive\service\SaraStoreAPI.class
 com\svalero\SaraShopReactive\App.class
-com\svalero\SaraShopReactive\task\SaraProductTask.class
 com\svalero\SaraShopReactive\controller\SplashScreenController.class
 com\svalero\SaraShopReactive\model\Shop.class

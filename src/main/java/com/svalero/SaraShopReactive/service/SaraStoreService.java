@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.svalero.SaraShopReactive.model.AllProducts;
 import com.svalero.SaraShopReactive.model.Product;
+import com.svalero.SaraShopReactive.model.Shop;
 import io.reactivex.Observable;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -41,9 +42,10 @@ public class SaraStoreService {
     }
 
     // Método para obtener todos los productos
-    public Observable<Product> getAllProducts() {
+    public Observable<Shop> getAllShops() {
+        System.out.println("Hola");
         // Realizar la solicitud a la API y mapear la respuesta
-        return this.saraStoreAPI.getAllProducts()
-                .flatMapIterable(products -> products);
+        return this.saraStoreAPI.getAllShops()
+                .flatMapIterable(shops -> shops);
     }
 }

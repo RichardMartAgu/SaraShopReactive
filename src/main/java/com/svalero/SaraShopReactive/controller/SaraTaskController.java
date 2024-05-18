@@ -1,7 +1,7 @@
 package com.svalero.SaraShopReactive.controller;
 
-import com.svalero.SaraShopReactive.model.Product;
-import com.svalero.SaraShopReactive.task.SaraProductTask;
+import com.svalero.SaraShopReactive.model.Shop;
+import com.svalero.SaraShopReactive.task.SaraShopTask;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,31 +17,31 @@ import java.util.ResourceBundle;
 public class SaraTaskController implements Initializable {
 
     @FXML
-    private TableView<Product> productTableView;
+    private TableView<Shop> shopTableView;
     @FXML
-    private TableColumn<Product, String> nameColumn;
+    private TableColumn<Shop, String> nameColumn;
     @FXML
-    private TableColumn<Product, String> descriptionColumn;
+    private TableColumn<Shop, String> addressColumn;
     @FXML
     private ProgressIndicator progressIndicator;
-    private ObservableList<Product> products;
+    private ObservableList<Shop> shops;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         //inicializamos la visualización de la tableView, la listView y los label del filtrado.
-        productTableView.setVisible(true);
+        shopTableView.setVisible(true);
 
         // inicializamos la lista de equipos en la competición
-        this.products = FXCollections.observableArrayList();
+        this.shops = FXCollections.observableArrayList();
 
         //añadimos la lista al tableView
-        productTableView.setItems(products);
+        shopTableView.setItems(shops);
 
         //añadir valores a las columnas del tableView
         nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
-        descriptionColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDescription()));
+        addressColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAddress()));
 
     }
 
@@ -50,10 +50,10 @@ public class SaraTaskController implements Initializable {
 
 
         // creamos la instancia de FootballTask con el código de competición, la lista de nombres y la barra de progreso
-        SaraProductTask saraProductTask = new SaraProductTask(products, progressIndicator);
+        SaraShopTask saraShopTask = new SaraShopTask(shops, progressIndicator);
 
         // Iniciar la tarea en un hilo separado
-        new Thread(saraProductTask).start();
+        new Thread(saraShopTask).start();
     }
 
 }

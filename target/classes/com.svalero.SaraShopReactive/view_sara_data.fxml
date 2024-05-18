@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="mainAnchor" accessibleRole="COMBO_BOX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="Anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svalero.SaraShopReactive.controller.AppController">
     <children>
-        <Button fx:id="listProducts" layoutX="22.0" layoutY="165.0" mnemonicParsing="false" onAction="#listProducts" prefHeight="41.0" prefWidth="150.0" styleClass="label" stylesheets="@../css/style.css" text="Buscar productos" />
+        <Button fx:id="listShops" layoutX="22.0" layoutY="165.0" mnemonicParsing="false" onAction="#listShops" prefHeight="41.0" prefWidth="150.0" styleClass="label" stylesheets="@../css/style.css" text="Buscar tienda" />
         <TabPane fx:id="tabSaraStore" layoutX="32.0" layoutY="320.0" prefHeight="420.0" prefWidth="903.0">
             <styleClass>
                 <String fx:value="TableView" />

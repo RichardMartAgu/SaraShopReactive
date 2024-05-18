@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 public class AppController implements Initializable {
 
     @FXML
-    private Button listProducts;
+    private Button listShops;
     @FXML
     private TabPane tabSaraStore;
     @FXML
@@ -36,7 +36,7 @@ public class AppController implements Initializable {
 
     // generamos un nuevo hilo
     @FXML
-    public void listProducts(ActionEvent event) throws IOException {
+    public void listShops(ActionEvent event) throws IOException {
 
         // recogemos el valor del máximo de tabs
         int maxTabs = maxTabsChoiceBox.getValue();
@@ -50,7 +50,7 @@ public class AppController implements Initializable {
 
             //creamos la nueva pestaña
             AnchorPane anchorPane = loader.load(); //cuidado
-            tabSaraStore.getTabs().add(new Tab("Product", anchorPane));
+            tabSaraStore.getTabs().add(new Tab("Shops", anchorPane));
 
             // Obtenemos el controlador del FXML cargado
             SaraTaskController saraTaskController = loader.getController();

@@ -60,7 +60,7 @@ public class App extends Application {
         // Se crea una escena con la vista de la ventana principal cargada desde el archivo FXML
         Scene scene = new Scene(loader.load());
         // Se establece el título de la ventana principal
-        stage.setTitle("AppFootballData");
+        stage.setTitle("AppSaraShop");
         // Se configura la escena en el Stage
         stage.setScene(scene);
         // Se muestra la ventana principal

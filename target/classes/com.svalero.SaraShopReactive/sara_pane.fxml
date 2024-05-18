@@ -4,18 +4,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
-            prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.svalero.SaraShopReactive.controller.SaraTaskController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.svalero.SaraShopReactive.controller.SaraTaskController">
     <children>
-        <TableView fx:id="productTableView" layoutX="21.0" layoutY="49.0" prefHeight="314.0" prefWidth="344.0"
-                   styleClass="columna-centrada" stylesheets="@../css/style.css">
+        <TableView fx:id="shopTableView" layoutX="21.0" layoutY="49.0" prefHeight="314.0" prefWidth="344.0" styleClass="columna-centrada" stylesheets="@../css/style.css">
             <columns>
-                <TableColumn fx:id="nameColumn" prefWidth="171.99999618530273" text="Nombre"/>
-                <TableColumn fx:id="descriptionColumn" prefWidth="172.0" text="Description"/>
+                <TableColumn fx:id="nameColumn" prefWidth="171.99999618530273" text="Name" />
+                <TableColumn fx:id="addressColumn" prefWidth="172.0" text="Address" />
             </columns>
         </TableView>
-        <ProgressIndicator fx:id="progressIndicator" layoutX="775.0" layoutY="100.0" prefHeight="35.0" prefWidth="57.0"
-                           progress="0.0"/>
+        <ProgressIndicator fx:id="progressIndicator" layoutX="775.0" layoutY="100.0" prefHeight="35.0" prefWidth="57.0" progress="0.0" />
     </children>
 </AnchorPane>
